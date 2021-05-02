@@ -66,6 +66,6 @@ class CreaturesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def creature_params
       # params.fetch(:creature, {}).permit(:firstname,:lastname,:email,:password)
-      params.require(:creature).permit(:firstname,:lastname,:email,:password)
+      params.require(:creature).permit(:firstname,:lastname,:email,:password, :username)
     end
 end

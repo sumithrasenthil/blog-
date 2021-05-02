@@ -1,7 +1,7 @@
 <h1> Welcome to the sumi's blog </h1>
 
 <% if logged_in? %>
-    <h2>Time to write your blog <%current_user.fullname %> </h2>
+    <h2>Time to write your blog <%= current_user.fullname %> </h2>
     <%= button_to "Logout", "/logout" %>
 <% else %>
     <%= button_to "Login", "/login",method: :get %>

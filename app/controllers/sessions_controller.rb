@@ -3,8 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @creature = Creature.find_by(firstname: params[:firstname])
-    puts"......creature..>>>#{@creature}........."
+    @creature = Creature.find_by(username: params[:username])
     if @creature and @creature.authenticate(params[:password])
       session[:user_id] = @creature.id
       redirect_to "/welcome"
